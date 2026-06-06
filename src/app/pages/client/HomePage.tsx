@@ -84,6 +84,7 @@ export function HomePage() {
 
         {/* Perfume bottle — right side, floating */}
         <div
+          className="hero-bottle"
           style={{
             position: "absolute",
             right: "4%",
@@ -112,6 +113,7 @@ export function HomePage() {
 
         {/* Text — lower-left */}
         <div
+          className="hero-text"
           style={{
             position: "absolute",
             bottom: "12%",
@@ -303,35 +305,27 @@ export function HomePage() {
       {/* ══════════════════════════════════════════
           КАТЕГОРИИ — editorial dark strips
       ══════════════════════════════════════════ */}
-      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "96px 32px 80px" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            marginBottom: 40,
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 700,
-              fontSize: 40,
-              color: "#1C1C1C",
-              margin: 0,
-            }}
-          >
+      <style>{`
+        .cat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+        .feat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+        .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); }
+        @media (max-width: 1023px) { .feat-grid { grid-template-columns: repeat(2,1fr); } }
+        @media (max-width: 767px) {
+          .cat-grid { grid-template-columns: 1fr; }
+          .feat-grid { grid-template-columns: repeat(2,1fr); }
+          .trust-grid { grid-template-columns: repeat(2,1fr); }
+          .hero-bottle { display: none !important; }
+          .hero-text { left: 24px !important; right: 24px !important; max-width: 100% !important; }
+        }
+      `}</style>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 24px 64px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 36 }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontWeight: 700, fontSize: "clamp(28px,4vw,40px)", color: "#1C1C1C", margin: 0 }}>
             Коллекции
           </h2>
           <Link
             to="/catalog"
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: 14,
-              color: "#8A8A8A",
-              textDecoration: "none",
-              transition: "color 150ms ease",
-            }}
+            style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "#8A8A8A", textDecoration: "none", transition: "color 150ms ease" }}
             onMouseEnter={e => (e.currentTarget.style.color = "#1C1C1C")}
             onMouseLeave={e => (e.currentTarget.style.color = "#8A8A8A")}
           >
@@ -339,14 +333,7 @@ export function HomePage() {
           </Link>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 16,
-          }}
-          className="grid-cols-1 md:grid-cols-3"
-        >
+        <div className="cat-grid">
           {categories.map(cat => (
             <Link
               key={cat.slug}
@@ -460,10 +447,10 @@ export function HomePage() {
       {/* ══════════════════════════════════════════
           CATALOG PREVIEW STRIP (featured)
       ══════════════════════════════════════════ */}
-      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px 80px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 36 }}>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 80px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 32 }}>
           <div>
-            <h2 style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: 28, color: "#1C1C1C", margin: 0 }}>
+            <h2 style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "clamp(22px,3vw,28px)", color: "#1C1C1C", margin: 0 }}>
               Избранные ароматы
             </h2>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "#8A8A8A", marginTop: 6 }}>
@@ -472,23 +459,13 @@ export function HomePage() {
           </div>
           <Link
             to="/catalog"
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: 13,
-              color: "#1C1C1C",
-              textDecoration: "none",
-              borderBottom: "1px solid #1C1C1C",
-              paddingBottom: 1,
-            }}
+            style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "#1C1C1C", textDecoration: "none", borderBottom: "1px solid #1C1C1C", paddingBottom: 1 }}
           >
             Смотреть все
           </Link>
         </div>
 
-        <div
-          style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}
-          className="grid-cols-2 lg:grid-cols-4"
-        >
+        <div className="feat-grid">
           {[
             { id: 1, name: "No. 5", brand: "CHANEL", price: "12 500", image: "https://images.unsplash.com/photo-1598634222670-87c5f558119c?w=600&auto=format&fit=crop", rating: 4.9 },
             { id: 2, name: "Sauvage", brand: "DIOR", price: "11 800", image: "https://images.unsplash.com/photo-1759794108525-94ff060da692?w=600&auto=format&fit=crop", rating: 4.8 },
@@ -559,30 +536,20 @@ export function HomePage() {
       ══════════════════════════════════════════ */}
       <section style={{ backgroundColor: "#F5F3EF", width: "100%" }}>
         <div
-          style={{
-            maxWidth: 1280,
-            margin: "0 auto",
-            padding: "48px 32px",
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            position: "relative",
-          }}
-          className="grid-cols-2 md:grid-cols-4"
+          className="trust-grid"
+          style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 24px" }}
         >
           {trustItems.map(({ Icon, title, sub }, i) => (
             <div
               key={i}
               style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                padding: "0 24px",
+                display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center",
+                padding: "20px 16px",
                 borderRight: i < trustItems.length - 1 ? "1px solid #E2E0DC" : "none",
               }}
             >
-              <Icon style={{ width: 24, height: 24, color: "#1C1C1C", marginBottom: 14, strokeWidth: 1.5 }} />
-              <p style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: 14, color: "#1C1C1C", margin: "0 0 5px" }}>
+              <Icon style={{ width: 22, height: 22, color: "#1C1C1C", marginBottom: 12, strokeWidth: 1.5 }} />
+              <p style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: 14, color: "#1C1C1C", margin: "0 0 4px" }}>
                 {title}
               </p>
               <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "#8A8A8A", margin: 0, lineHeight: 1.5 }}>
