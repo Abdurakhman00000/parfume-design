@@ -20,8 +20,8 @@ const product = {
   volume: "100 мл",
   inStock: true,
   images: [
-    "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&auto=format",
-    "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800&auto=format",
+    "https://images.unsplash.com/photo-1598634222670-87c5f558119c?w=800&auto=format",
+    "https://images.unsplash.com/photo-1774682060922-c395859148c9?w=800&auto=format",
   ]
 };
 

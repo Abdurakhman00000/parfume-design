@@ -6,19 +6,19 @@ const allProducts = [
   {
     id: 1, name: "No. 5", brand: "CHANEL", category: "Цветочные",
     price: 12500, oldPrice: null,
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1598634222670-87c5f558119c?w=600&auto=format&fit=crop",
     rating: 4.9, reviews: 127, volumes: ["30мл", "50мл", "100мл"], activeVolume: "50мл", badge: null, sale: false,
   },
   {
     id: 2, name: "Sauvage", brand: "DIOR", category: "Свежие",
     price: 9800, oldPrice: 11800,
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1759794108525-94ff060da692?w=600&auto=format&fit=crop",
     rating: 4.8, reviews: 214, volumes: ["60мл", "100мл", "200мл"], activeVolume: "100мл", badge: "−17%", sale: true,
   },
   {
     id: 3, name: "Oud Wood", brand: "TOM FORD", category: "Древесные",
     price: 15200, oldPrice: null,
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1774682060959-efe13b7a12b9?w=600&auto=format&fit=crop",
     rating: 5.0, reviews: 89, volumes: ["50мл", "100мл"], activeVolume: "50мл", badge: null, sale: false,
   },
   {
@@ -30,19 +30,19 @@ const allProducts = [
   {
     id: 5, name: "Aventus", brand: "CREED", category: "Древесные",
     price: 18500, oldPrice: null,
-    image: "https://images.unsplash.com/photo-1599932754658-80ad37d828c7?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1765572354938-b88b9d7244cb?w=600&auto=format&fit=crop",
     rating: 5.0, reviews: 63, volumes: ["50мл", "100мл", "250мл"], activeVolume: "100мл", badge: "НОВИНКА", sale: false,
   },
   {
     id: 6, name: "Bloom", brand: "GUCCI", category: "Цветочные",
     price: 9900, oldPrice: 11500,
-    image: "https://images.unsplash.com/photo-1590156206925-5883f8efbb34?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1595425959632-34f2822322ce?w=600&auto=format&fit=crop",
     rating: 4.8, reviews: 142, volumes: ["30мл", "50мл", "100мл"], activeVolume: "50мл", badge: "−14%", sale: true,
   },
   {
     id: 7, name: "1 Million", brand: "PACO RABANNE", category: "Восточные",
     price: 8900, oldPrice: null,
-    image: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&auto=format&fit=crop",
     rating: 4.6, reviews: 98, volumes: ["50мл", "100мл"], activeVolume: "50мл", badge: null, sale: false,
   },
   {

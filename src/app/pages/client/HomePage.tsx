@@ -21,14 +21,14 @@ const categories = [
     name: "Глубина и тайна",
     count: "38 ароматов",
     slug: "unisex",
-    image: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=900&auto=format&fit=crop",
   },
   {
     tag: "СВЕЖИЕ",
     name: "Лёгкость каждого дня",
     count: "52 аромата",
     slug: "men",
-    image: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1617943539287-d6fe110ac7ad?w=900&auto=format&fit=crop",
   },
 ];
 
@@ -97,7 +97,7 @@ export function HomePage() {
           }}
         >
           <img
-            src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&auto=format&fit=crop&q=85"
+            src="https://images.unsplash.com/photo-1774682060922-c395859148c9?w=800&auto=format&fit=crop&q=85"
             alt="Парфюм"
             style={{
               width: "100%",
@@ -490,9 +490,9 @@ export function HomePage() {
           className="grid-cols-2 lg:grid-cols-4"
         >
           {[
-            { id: 1, name: "No. 5", brand: "CHANEL", price: "12 500", image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&auto=format&fit=crop", rating: 4.9 },
-            { id: 2, name: "Sauvage", brand: "DIOR", price: "11 800", image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format&fit=crop", rating: 4.8 },
-            { id: 3, name: "Oud Wood", brand: "TOM FORD", price: "15 200", image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=600&auto=format&fit=crop", rating: 5.0 },
+            { id: 1, name: "No. 5", brand: "CHANEL", price: "12 500", image: "https://images.unsplash.com/photo-1598634222670-87c5f558119c?w=600&auto=format&fit=crop", rating: 4.9 },
+            { id: 2, name: "Sauvage", brand: "DIOR", price: "11 800", image: "https://images.unsplash.com/photo-1759794108525-94ff060da692?w=600&auto=format&fit=crop", rating: 4.8 },
+            { id: 3, name: "Oud Wood", brand: "TOM FORD", price: "15 200", image: "https://images.unsplash.com/photo-1774682060959-efe13b7a12b9?w=600&auto=format&fit=crop", rating: 5.0 },
             { id: 4, name: "Eros", brand: "VERSACE", price: "9 500", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&auto=format&fit=crop", rating: 4.7 },
           ].map(product => (
             <Link
